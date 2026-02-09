@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Invitación San Valentín 💘</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#ffb6c1,#ffe4e1);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+}
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:25px;
+  max-width:380px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+.card img{
+  width:100%;
+  border-radius:15px;
+}
+h1{
+  color:#d6336c;
+}
+p{
+  color:#444;
+}
+.buttons{
+  margin-top:20px;
+}
+button{
+  border:none;
+  padding:12px 20px;
+  font-size:16px;
+  border-radius:25px;
+  cursor:pointer;
+  margin:8px;
+}
+#yes{
+  background:#ff4d6d;
+  color:white;
+}
+#no{
+  background:#adb5bd;
+  color:white;
+  position:relative;
+}
+#final{
+  display:none;
+  color:#d6336c;
+  font-size:20px;
+  margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+  <!-- CAMBIA LA IMAGEN AQUÍ -->
+  <img src="foto.jpg" alt="Nosotros">
+
+  <h1>💌 Invitación Oficial 💌</h1>
+
+  <p>
+    Hola amorcito hermoso 🥰<br><br>
+    Con el corazón en la mano y una sonrisa nerviosa…<br><br>
+    Este <b>14 de febrero</b><br>
+    ¿Te gustaría aceptar la misión de ser<br>
+    <b>mi San Valentín?</b> 💘
+  </p>
+
+  <div class="buttons">
+    <button id="yes" onclick="acepto()">💖 Sí, acepto</button>
+    <button id="no" onmouseover="mover()">🙈 No</button>
+  </div>
+
+  <div id="final">
+    💍💘 ¡Sabía que dirías que sí! 💘💍<br>
+    Te amo hoy y siempre 😘
+  </div>
+</div>
+
+<script>
+function acepto(){
+  document.querySelector(".buttons").style.display="none";
+  document.getElementById("final").style.display="block";
+}
+function mover(){
+  const btn=document.getElementById("no");
+  btn.style.left=Math.random()*100-50+"px";
+  btn.style.top=Math.random()*100-50+"px";
+}
+</script>
+</body>
+</html>
